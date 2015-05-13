@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>MakersTool {% block title %}{% endblock %}</title>
+  {% assets "dashboard_lib", "dashboard_js" %}
+    <script src="{{ ASSET_URL }}"></script>
+  {% endassets %}
+  {% assets "main_css" %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+  {% endassets %}
+  {% block head %}{% endblock %}
+
+</head>
+<body>
+  <section>
+    <div class="content" id="content">
+      {% block body %}{% endblock %}
+    </div>
+    <div class="clearfix"></div>
+  </section>
+
+      {% block footer %}{% endblock %}
+
+
+</body>
+{% block templates %}{% endblock %}
+</html>

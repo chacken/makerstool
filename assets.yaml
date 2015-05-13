@@ -1,0 +1,206 @@
+dashboard_css:
+  filters:  less
+  output:   static/gen/dashboard.css
+  contents:
+    - less/dashboard.less
+    #- less/reporting.less
+
+main_css:
+  filters:  less
+  output:   static/gen/main.css
+  contents:
+    #- less/main.less
+    - less/login.less
+
+#home_css:
+#  filters:  less
+#  output:   static/gen/home.css
+#  contents:
+#    #- less/home.less
+#    - css/960.css
+#    - css/home.css
+
+#order_css:
+#  filters:  less
+#  output:   static/gen/order.css
+#  contents:
+#    - less/order.less
+#
+dashboard_js:
+  filters:  coffeescript
+  output:   static/gen/dashboard.js
+  contents:
+    - coffee/namespace.coffee
+    - coffee/makers.coffee
+    - coffee/datapoints.coffee
+    - coffee/mediums.coffee
+    - coffee/webproperties.coffee
+    - coffee/projects.coffee
+    - coffee/nav.coffee
+    #- coffee/actions.coffee
+    #- coffee/controllers/billing.coffee
+    #- coffee/controllers/services.coffee
+    #- coffee/controllers/users.coffee
+    #- coffee/dashboard.coffee
+    #- coffee/model/services.coffee
+    #- coffee/model/charges.coffee
+    #- coffee/model/users.coffee
+    #- coffee/model/filters.coffee
+    #- coffee/views/modal_form.coffee
+    #- coffee/views/active_toggle.coffee
+    #- coffee/views/confirm.coffee
+    #- coffee/views/billing.coffee
+    #- coffee/views/buttons.coffee
+    #- coffee/views/filters.coffee
+    #- coffee/views/services.coffee
+    #- coffee/views/charges.coffee
+    #- coffee/views/users.coffee
+    #- coffee/views/liveform.coffee
+
+templates_js:
+  depends:  template_bodies
+  output:   static/gen/templates.js
+  filters:
+    - jsmin
+  contents:
+    - lib/js/jst.js
+    - gen/template_bodies.js
+#
+template_bodies:
+  filters: template
+  output: static/gen/template_bodies.js
+  contents:
+    - templates/ui/dropdown.html
+    - templates/projects/create.html
+    - templates/projects/overview.html
+    - templates/projects/trends.html
+    - templates/projects/navAccount.html
+    - templates/projects/navWebProperty.html
+    - templates/projects/navProject.html
+#
+#order_templates_js:
+#  depends:  admin_template_bodies
+#  output:   static/gen/order_templates.js
+#  filters:
+#    - jsmin
+#  contents:
+#    - lib/js/jst.js
+#    - gen/order_template_bodies.js
+#
+#order_template_bodies:
+#  filters: template
+#  output: static/gen/order_template_bodies.js
+#  contents:
+#    - templates/order/dashboard.html
+#    - templates/order/client.html
+#    - templates/order/billing.html
+#    - templates/order/server/config.html
+#    - templates/order/server/option.html
+#    - templates/order/server/item.html
+#    - templates/ui/confirm.html
+#
+#order_js:
+#  filters:  coffeescript
+#  output:   static/gen/order.js
+#  contents:
+#    - coffee/namespace.coffee
+#    - coffee/actions.coffee
+#    #- coffee/controllers/users.coffee
+#    - coffee/order/dashboard.coffee
+#    - coffee/order/wizard.coffee
+#    - coffee/order/controllers/server.coffee
+#    - coffee/order/views/server.coffee
+#    - coffee/model/servers.coffee
+#    - coffee/model/services.coffee
+#    - coffee/model/users.coffee
+#    - coffee/model/customers.coffee
+#    - coffee/model/filters.coffee
+#    #- coffee/views/modal_form.coffee
+#    - coffee/views/active_toggle.coffee
+#    - coffee/views/confirm.coffee
+#    - coffee/views/buttons.coffee
+#    - coffee/views/liveform.coffee
+#    #- coffee/views/filters.coffee
+#    #- coffee/views/users.coffee
+#
+#
+#admin_templates_js:
+#  depends:  admin_template_bodies
+#  output:   static/gen/admin_templates.js
+#  filters:
+#    - jsmin
+#  contents:
+#    - lib/js/jst.js
+#    - gen/admin_template_bodies.js
+#
+#admin_template_bodies:
+#  filters: template
+#  output: static/gen/admin_template_bodies.js
+#  contents:
+#    - templates/admin/selector/form.html
+#    - templates/admin/selector/cpus.html
+#    - templates/admin/servers/dashboard.html
+#    - templates/admin/servers/detail.html
+#    - templates/admin/servers/form.html
+#    - templates/admin/servers/list.html
+#    - templates/admin/servers/row.html
+#    - templates/users/dashboard.html
+#    #- templates/users/detail.html
+#    - templates/users/form.html
+#    - templates/users/list.html
+#    - templates/users/row.html
+#    - templates/ui/confirm.html
+#
+#admin_js:
+#  filters:  coffeescript
+#  output:   static/gen/admin.js
+#  contents:
+#    - coffee/namespace.coffee
+#    - coffee/actions.coffee
+#    - coffee/controllers/admin/servers.coffee
+#    - coffee/admin.coffee
+#    - coffee/model/servers.coffee
+#    - coffee/model/users.coffee
+#    - coffee/model/filters.coffee
+#    - coffee/views/modal_form.coffee
+#    - coffee/views/active_toggle.coffee
+#    - coffee/views/confirm.coffee
+#    #- coffee/views/billing.coffee
+#    - coffee/views/buttons.coffee
+#    #- coffee/views/filters.coffee
+#    - coffee/views/admin/selector.coffee
+#    - coffee/views/admin/servers.coffee
+#    - coffee/views/users.coffee
+
+
+client_lib:
+  output: static/gen/client_lib.js
+  contents:
+    - lib/js/jquery-2.1.3.min.js
+    - lib/js/underscore-min.js
+    - lib/js/backbone-min.js
+    - lib/js/backbone.subroute.min.js
+    - lib/js/backbone-relational.js
+    #- lib/js/ect.min.js
+    #- lib/js/jquery-ui.min.js
+    #- lib/js/jquery.populate.min.js
+    #- lib/js/jquery.tmpl.js
+    #- lib/js/jquery.tablesorter.min.js
+    #- lib/js/jquery.upload.js
+    #- lib/js/swfupload.js
+    #- lib/js/pw-gen.js
+    #- less/bootstrap-2.0.3/js/bootstrap-dropdown.js
+
+#reporting_js:
+#  filters:  coffeescript
+#  output:   static/gen/reporting.js
+#  contents:
+#    - coffee/reporting.coffee
+
+#reporting_lib:
+#  output: static/gen/reporting_lib.js
+#  contents:
+#    - lib/js/d3.js
+#    - lib/js/d3.time.js
+
+

@@ -1,0 +1,19 @@
+#git+https://74e4da85ff6b94eb1d1e3019395b2c35d5d1fef7:x-oauth-basic@github.com/TheMakersCrew/rethinkengine.git
+
+#git+git://github.com/pferate/google-api-python-client@python3#egg=google-api-python-client
+git+git://github.com/chacken/google-api-python-client@python3#egg=google-api-python-client
+#google-api-python-client
+flask == 0.10.1
+flask-kvsession
+flask-assets
+flask-script
+#flask-triangle
+mongoengine
+flask-mongoengine
+PyYAML
+python-dateutil
+jsmin
+httplib2
+simplejson
+pycrypto
+oauth2client==1.4.2

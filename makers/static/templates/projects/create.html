@@ -1,0 +1,22 @@
+<!-- inner content wrapper -->
+  <div class="modal" style="display:block;">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">Select Project</div>
+      <div class="modal-body">
+    <select name="id">
+  <% _.each(projects, function(project){ %>
+    <option value="<%= project.get('id') %>"><%= project.get('name') %></option>
+  <% }); %>
+    </select>
+    </div>
+    <div class="modal-footer">
+      <button class="cancel">Cancel</button>
+      <button class="submit">Create</button>
+    </div>
+  </div>
+  </div>
+  </div>
+<!-- /inner content wrapper -->
+
+
